@@ -11,8 +11,13 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'angular-intro';
   imgUrl = '../assets/BL-logo.png';
+  url = 'https://www.bridgelabz.com';
 
   ngOnInit() {
     this.title = 'Hello from BridgeLabz';
+  }
+  onClick($event: any) {
+    console.log('Save button is clicked!', $event);
+    window.open(this.url, '_blank');
   }
 }
